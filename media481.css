@@ -1,0 +1,58 @@
+@media screen and (max-width:481px) {
+  .weibo{
+    width: 250px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    padding:0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro{
+    font-size: 0.8rem;
+  }
+  .avatars input{
+    width: 200px;
+  }
+  .avatars ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    width: 200px;
+    justify-content: flex-start;
+  }
+  .avatars ul li{
+    margin-bottom: 1rem;
+  }
+  .writing{
+    align-items: center;
+  }
+  .writing textarea{
+    width: 200px;
+    align-items: center;
+  }
+  .writing .post button{
+    width: 100px;
+    height: 35px;
+  }
+  .writing .post {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+  .feeds .feed .profile{
+    width: 45px;
+    height: 45px;
+  }
+  .feeds .feed .content a {
+    font-size: 1rem;
+  }
+  .feeds .feed .content span{
+    font-size: 0.9rem;
+  }
+  .feeds .feed .content .delete{
+    font-size: 0.7rem;
+  }
+
+
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{margin: 0;padding: 0}
+      body{
+        width: 100vw;
+        min-height: 100vh;
+        background-image: url("img/bg.jpg");
+        background-size: 100%;
+        color:#3d3d3d;
+        overflow: scroll;
+      }
+      .wrapper{
+        width: 100vw;
+        min-height: 100vh;
+        background: rgba(0,0,0,0.6);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .weibo{
+        width: 430px;
+        height: auto;
+        background: white;
+        border-radius: 10px;
+        padding:1rem 2rem 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .avatars{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+      .avatars ul{
+        display: flex;
+      }
+      .avatars ul li{
+        width: 40px;
+        height:40px;
+        border-radius: 50%;
+        margin-left: 0.5rem;
+        cursor: pointer;
+      }
+      .avatars input{
+        width: 120px;
+        height: 25px;
+        border-radius: 5px;
+        border:1px solid #ccc;
+        padding:0.2rem;
+      }
+      li{
+        list-style: none;
+      }
+      .writing textarea{
+        border-radius: 3px;
+        margin-bottom: 1rem;
+      }
+      .writing .post{
+        margin-bottom: 1rem;
+      }
+      .writing{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .writing .post{
+        display: flex;
+        align-items: center;
+      }
+      .writing .post button{
+        width: 120px;
+        height: 40px;
+        margin-left: 1rem;
+        background: #67c5d3;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color:white;
+      }
+      .writing .post p{
+        font-size: 1.2rem;
+        color:#b2b2b2;
+      }
+      .writing .post span{
+        font-size: 2rem;
+        color:#b2b2b2;
+        margin-right: 0.5rem;
+      }
+      .feeds .feed .profile{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-image: url("img/avatar4.jpeg");
+        background-size: 100%;
+        margin-right: 1rem;
+      }
+      .feeds .feed .content{
+        width: 80%;
+      }
+      .feeds .feed{
+        display: flex;
+        justify-content:flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        border-bottom: 1px dashed #ccc;
+        margin-bottom: 1rem;
+      }
+      .feeds .feed .operations{
+        color:#b2b2b2;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+      }
+      .feeds .feed .operations .delete{
+        display: none;
+        cursor: pointer;
+      }
+      .avatars .active{
+        border:1px solid #67c5d3;
+        transform: scale(1.15,1.15);
+      }
+      .feeds .feed .content a{
+        text-decoration: none;
+        color:#2b4a78;
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+      }
+    </style>
+    <link rel="stylesheet" href="media801.css">
+    <link rel="stylesheet" href="media481.css">
+  </head>
+  <body>
+      <div class="wrapper">
+          <div class="weibo">
+               <p style="margin-bottom:1rem" class="intro">Tell us what you are thinking</p>
+               <div class="avatars">
+                   <input type="text" name="" value="" class="name" placeholder="Input your name">
+                   <ul>
+                     <li class="active" style="background-image:url(img/avatar1.jpeg); background-size:100%;"></li>
+                     <li style="background-image:url(img/avatar2.jpeg); background-size:100%;"></li>
+                     <li style="background-image:url(img/avatar3.jpeg); background-size:100%;"></li>
+                     <li style="background-image:url(img/avatar9.jpeg); background-size:100%;"></li>
+                     <li style="background-image:url(img/avatar5.jpeg); background-size:100%;"></li>
+                     <li style="background-image:url(img/avatar6.jpeg); background-size:100%;"></li>
+                   </ul>
+               </div>
+               <div class="writing">
+                 <textarea name="name" rows="5" cols="51"></textarea>
+                 <div class="post">
+                   <div class="pWrapper">
+                     <span>140</span>
+                     <p>words left</p>
+                   </div>
+
+                   <button type="button" name="button">Post</button>
+                 </div>
+               </div>
+               <div class="feeds">
+                  <div class="feed">
+                       <div class="profile"></div>
+                        <div class="content">
+                          <div class="post_content">
+                             <a href="#">Deja Vu:</a>
+                             <span>Added a new advertisement function</span>
+                          </div>
+                          <div class="operations">
+                                <span>2020-06-18 12:21</span>
+                                <span class="delete">Delete</span>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="feed">
+                       <div class="profile"></div>
+                        <div class="content">
+                          <div class="post_content">
+                             <a href="#">Deja Vu:</a>
+                             <span >Press Ctril+Enter to post</span>
+                          </div>
+                          <div class="operations">
+                                <span>2020-06-18 09:40</span>
+                                <span class="delete">Delete</span>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="feed">
+                       <div class="profile"></div>
+                        <div class="content">
+                          <div class="post_content">
+                             <a href="#">Deja Vu:</a>
+                             <span>Click to choose your avatar</span>
+                          </div>
+                          <div class="operations">
+                                <span>2020-06-18 11:05</span>
+                                <span class="delete">Delete</span>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="feed">
+                       <div class="profile"></div>
+                        <div class="content">
+                          <div class="post_content">
+                             <a href="#">Deja Vu:</a>
+                             <span>Added a new function to record the post time</span>
+                          </div>
+                          <div class="operations">
+                                <span>2020-06-18 21:11</span>
+                                <span class="delete">Delete</span>
+                          </div>
+                        </div>
+                  </div>
+
+                  <div class="feed">
+                       <div class="profile"></div>
+                        <div class="content">
+                          <div class="post_content">
+                             <a href="#">Deja Vu:</a>
+                             <span>A weibo post function. Welcome trying!</span>
+                          </div>
+                          <div class="operations">
+                                <span>2020-06-18 22:11</span>
+                                <span class="delete">Delete</span>
+                          </div>
+                        </div>
+                  </div>
+               </div>
+          </div>
+      </div>
+
+      <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
